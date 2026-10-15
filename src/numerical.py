@@ -21,7 +21,7 @@ def integrate_trapezoidal(f: Callable[[complex], complex], contour: ComplexConto
     integral = (np.sum(integrand_vals) - 0.5 * (integrand_vals[0] + integrand_vals[-1])) * dt
     return integral
 
-```python
+
 def integrate_adaptive(
     f: Callable[[complex], complex],
     contour: ComplexContour,
@@ -93,4 +93,4 @@ def integrate_adaptive(
     fmid = eval_integrand(0.5)
 
     return adaptive_step(0.0, 1.0, fa, fb, fmid, tolerance, 0)
-```
+
